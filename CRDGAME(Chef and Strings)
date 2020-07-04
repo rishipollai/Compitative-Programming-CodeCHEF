@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main(){
+    long long int t;
+    cin>>t;
+    while(t--)
+    {
+        long long int n,i;
+        cin>>n;
+        long long int a[n],k=0;
+        for(i=0;i<n;i++) cin>>a[i];
+        for(i=0;i<n-1;i++)
+        {
+           if(a[i]!=a[i+1])
+           {
+                long long int s=abs(a[i]-a[i+1]);
+                s=s-1;
+                k=k+s;
+           }
+           else
+           {
+                long long int s=abs(a[i]-a[i+1]);
+                k=k+s;
+           }
+        }
+        cout<<k<<"\n";
+    }
+}
