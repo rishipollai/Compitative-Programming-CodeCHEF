@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string CodelandUsernameValidation(string str) {
+  
+  // code goes here 
+ int n=str.size();
+ if(n<4 or n>25)
+    return "false";
+ if(!('a'<=str[0]<='z' or 'A'<=str[0]<='Z'))
+    return "false";
+ for(auto x:str)
+ {
+    if(!(isalpha(x) or isdigit(x) or x=='_'))
+        return "false";
+ }
+if(str[n-1]=='_')
+   return "false";
+
+ return "ture";
+
+
+}
+
+int main(void) { 
+   
+  // keep this function call here
+  cout << CodelandUsernameValidation(coderbyteInternalStdinFunction(stdin));
+  return 0;
+    
+}
